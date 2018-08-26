@@ -1,0 +1,45 @@
+{
+    "name": "game/dominoes",
+    "description": "This is dominoes board game. It is a family game played with rectangular tiles. Each tile is divided into two square ends. Each end is marked with a number (one to six) of spots or is blank. There are 28 tiles, one for each combination of spots and blanks",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pulkit Swarup",
+            "email": "pulkit.swarup@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0@dev",
+        "phpunit/phpunit": "^6.5",
+        "spatie/phpunit-watcher": "^1.6"
+    },
+    "autoload": {
+        "files": [
+            "helpers.php"
+        ],
+        "psr-4": {
+            "Game\\Dominoes\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Game\\Dominoes\\Tests\\" : "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test" : "phpunit",
+        "game" : [
+            "@composer install",
+            "@php app.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
